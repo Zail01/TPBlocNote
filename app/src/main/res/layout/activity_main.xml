@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,8 +11,158 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.zail.tpblocnote.MainActivity">
 
+    <Button
+        android:text="@string/boldButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/boldButton"
+        android:background="@mipmap/bluebutton"/>
+
+    <Button
+        android:text="@string/italicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/italicButton"
+        android:background="@mipmap/bluebutton"/>
+
+    <Button
+        android:text="@string/underButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/underButton"
+        android:background="@mipmap/bluebutton"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/smile"
+        android:id="@+id/smileButton"
+        android:layout_alignTop="@+id/laughtButton"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/laught"
+        android:id="@+id/laughtButton"
+        android:layout_below="@+id/boldButton"
+        android:layout_alignRight="@+id/boldButton"
+        android:layout_alignEnd="@+id/boldButton"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="14dp"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/wink"
+        android:id="@+id/winkButton"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_alignTop="@+id/smileButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/colorPolice"
+        android:layout_below="@+id/smileButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp">
+
+        <RadioButton
+            android:text="@string/blackPolice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/blackPolice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/RedPolice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/redPolice"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/bluePolice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bluePolice"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <Button
+        android:text="@string/hideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:id="@+id/hideButton"
+        android:layout_below="@+id/colorPolice"
+        android:layout_alignLeft="@+id/italicButton"
+        android:layout_alignStart="@+id/italicButton"
+        android:background="@mipmap/greenbutton"/>
+
+    <TextView
+        android:text="@string/editTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/editTitle"
+        android:layout_below="@+id/hideButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:gravity="top"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/editTitle"
+        android:layout_toEndOf="@+id/editTitle"
+        android:layout_alignTop="@+id/editTitle" />
+
+    <TextView
+        android:text="@string/previewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/previewTitle"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:inputType="textPersonName"
+        android:focusable="false"
+        android:ems="10"
+        android:layout_below="@+id/previewTitle"
+        android:layout_marginTop="15dp"
+        android:id="@+id/previewText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
