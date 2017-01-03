@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TPBlocNote</string>
+    <string name="boldButton">Bold</string>
+    <string name="italicButton">Italic</string>
+    <string name="underButton">Highlighted</string>
+    <string name="RedPolice">Red</string>
+    <string name="blackPolice">Black</string>
+    <string name="bluePolice">Blue</string>
+    <string name="hideButton">Hide</string>
+    <string name="previewTitle">"Preview : "</string>
+    <string name="editTitle">"Edit : "</string>
+</resources>
